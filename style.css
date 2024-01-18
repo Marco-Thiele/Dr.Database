@@ -1,0 +1,8 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.gray-background{
+    background-color: rgb(237,239,242);
+}
