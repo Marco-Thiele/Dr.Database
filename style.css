@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 h1{
     display: flex;
     justify-content: center;
@@ -5,4 +9,55 @@ h1{
 
 .gray-background{
     background-color: rgb(237,239,242);
+    padding: 16px;
+}
+
+.doc-contant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.profil-img img{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.text-center-width{
+    width: 35%;
+    text-align: center;
+}
+
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    z-index: 2;
+    background-color: rgb(237,239,242);
+    border: 1px solid black;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay-profil-img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.d-none{
+    display: none;
 }
