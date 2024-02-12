@@ -18,10 +18,11 @@ fetch(url)
 
 
 function renderDocs() {
+    
     doctors.forEach(doc => {
         let singleDoc = document.getElementById('allDoctors');
         singleDoc.innerHTML += /*html*/`
-                    <div class="doc-contant" onclick="showOverlay()">
+                    <div class="doc-contant" onclick="showOverlay(${`doc.id`})">
                         <div class="profil-img">
                             <img src="${doc.img}" alt="">
                         </div>
@@ -40,7 +41,24 @@ function renderDocs() {
     });
 } 
 
-function showOverlay() {
+function showOverlay(i) {
     let overlay = document.getElementById('overlay');
     overlay.classList.remove('d-none');
+    let doc = doctors[i];
+    overlay.innerHTML = /*html*/ `
+        <div >
+        <img class="overlay-profil-img" src="${doc.img}" alt="">
+        </div>
+        <div class="title">
+            ${doc.title}
+        </div>
+        <div class="name">
+            ${doc.first_name} ${doc.last_name}
+        </div>
+        <div class="addresse">
+            ${doc.zipcode} ${doc.city} ${doc.street}
+        </div>
+        <div class="open">
+
+        </div>`
 }
